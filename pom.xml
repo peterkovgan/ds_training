@@ -5,14 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.pet</groupId>
-    <artifactId>Examples</artifactId>
+    <artifactId>ds_training</artifactId>
     <version>1.0-SNAPSHOT</version>
-
-    <parent>
-      <groupId>com.pet</groupId>
-      <artifactId>ds_training</artifactId>
-      <version>1.0-SNAPSHOT</version>
-    </parent> 
-
+    
+    <modules>
+       <module>Examples</module>
+    </modules>
     
 </project>

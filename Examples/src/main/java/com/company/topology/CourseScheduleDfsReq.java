@@ -9,6 +9,12 @@ import java.util.stream.IntStream;
 /**
  * https://leetcode.com/problems/course-schedule-ii/
  *
+ *
+ * Basically, it is a recursive algorithm ,
+ * forming the topological order
+ * Later (in recursion) nodes put later in the topologicalOrder array, thus creating the perfect order.
+ *
+ *
  * Algorithm  (Topological Order)
  *
  * Initialize a stack S that will contain the topologically sorted order of the courses in our graph.
@@ -68,7 +74,7 @@ public class  CourseScheduleDfsReq {
         this.adjList = new HashMap<Integer, List<Integer>>();
         this.topologicalOrder = new ArrayList<>();
 
-        // By default all vertces are WHITE
+        // By default all vertices are WHITE
         for (int i = 0; i < numCourses; i++) {
             this.color.put(i, WHITE);
         }

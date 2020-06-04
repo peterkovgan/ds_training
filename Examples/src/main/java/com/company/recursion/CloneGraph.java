@@ -26,7 +26,7 @@ import java.util.Map;
  * PLUS (in space):
  *
  * DFS
- * The space occupied by the recursion stack would be equal to O(H) where HH is the height of the graph.
+ * The space occupied by the recursion stack would be equal to O(H) where H is the height of the graph.
  * Overall, the space complexity would be O(N).
  * BFS
  * The space occupied by the queue would be equal to O(W) where WW is the width of the graph.

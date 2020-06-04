@@ -59,7 +59,7 @@ public class CourseScheduleIndegreeQueue {
      *
      * end while loop
      *
-     *
+     * O(V+E) - but just because we use adj list, in matrix it will be V^2
      *
      *
      */

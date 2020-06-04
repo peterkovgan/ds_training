@@ -33,11 +33,13 @@ public class DivideBetter {
 
         int quotient = 0, quo = 1;
 
-        while(dividend >= divisor) {
+        while(dividend >= divisor) { //see pic
+
             while(res <= dividend - res) { //while (dividend > res*2)
                 res = res << 1; //res=res*2
                 quo = quo << 1; //quo=quo*2
             }
+
             quotient += quo;
             dividend -= res;
             if(overflow) {

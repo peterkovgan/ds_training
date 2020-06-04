@@ -24,14 +24,15 @@ public class ShortestPathInDagBasedOnTopologicalOrder {
         int namVertices = 5; //(edges from 0 to 10)
 
         //make a topOrderFirst by ANY approach
-        int[] topOrder = new CourseScheduleDfsReq().findOrder(namVertices, edges);
-
+        int[] topOrder = new CourseScheduleDfsReq().findOrder(namVertices, edges); // DFS on adj list here: ( O(V+E) )
 
         System.out.println("Top order:");
+
         IntStream.of(topOrder).forEach(System.out::println);
 
         //adj map
         Map<Integer, List<Integer>> adjList = new HashMap<>();
+
         for(int [] edge : edges){
             List<Integer> list = adjList.get(edge[1]);
             if(list==null){

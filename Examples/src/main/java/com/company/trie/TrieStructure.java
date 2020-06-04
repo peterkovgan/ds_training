@@ -49,16 +49,20 @@ public class TrieStructure {
     }
 
     public boolean requSearch(Element[] children, String word, String whole) {
+
         if (word.isEmpty()) {
+
             return true;
+
         } else {
+
             Character searchChar = word.charAt(0);
 
             Element currentElement = children[searchChar - 97];
 
             boolean found = (currentElement != null);
 
-            if (!found) return false;
+            if ( !found ) return false;
 
             String rest = word.substring(1);
 

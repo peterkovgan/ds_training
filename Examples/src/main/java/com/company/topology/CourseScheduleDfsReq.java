@@ -11,7 +11,7 @@ import java.util.stream.IntStream;
  *
  *
  * Basically, it is a recursive algorithm ,
- * forming the topological order
+ * forming the topological order, using DF traversal, top. ordering only possible in DAG without cycles.
  * Later (in recursion) nodes put later in the topologicalOrder array, thus creating the perfect order.
  *
  *
@@ -51,6 +51,8 @@ import java.util.stream.IntStream;
  *
  * The we print in reverse order: C (B depends on C), B (A depends on B) , and finally A
  *
+ *
+ * O(V+E) - but just because we use adj list, in matrix it will be V^2
  *
  *
  *

@@ -2,13 +2,43 @@ package com.company.linkedList;
 
 public class AddTwoNumbers {
 
-    class ListNode {
+    static class ListNode {
 
         int val;
         ListNode next;
 
         ListNode(int x) {
             val = x;
+        }
+
+    }
+
+    public static void main(String[] args) {
+        AddTwoNumbers task = new AddTwoNumbers();
+        ListNode n1 = new ListNode(2);
+        ListNode n2 = new ListNode(4);
+        n1.next=n2;
+        ListNode n3 = new ListNode(3);
+        n2.next=n3;
+
+
+        ListNode n4 = new ListNode(5);
+        ListNode n5 = new ListNode(9);
+        ListNode n6 = new ListNode(9);
+        ListNode n7 = new ListNode(9);
+        n4.next=n5;
+        n5.next=n6;
+        n6.next=n7;
+
+        ListNode node = task.addTwoNumbers(n1, n4);
+
+        for(;;){
+            System.out.print(node.val);
+            System.out.print(",");
+            if(node.next==null){
+                break;
+            }
+            node = node.next;
         }
 
     }
@@ -49,7 +79,7 @@ public class AddTwoNumbers {
 
             ListNode localNode = new ListNode(lowDigit);
 
-            if (resultNode == null) {
+            if (resultNode == null) {//it happens only 1-ce
                 resultNode = localNode;
                 runningLastNode = resultNode;
             } else {

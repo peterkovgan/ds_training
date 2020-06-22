@@ -2,6 +2,7 @@ package com.company.linkedList;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 /**
  * A linked list is given such that each node contains an additional random pointer which could point to any node in the list or null.
@@ -43,6 +44,21 @@ public class CopyListWithRandomPointer {
             val = _val;
             next = _next;
             random = _random;
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+            Node node = (Node) o;
+            return val == node.val &&
+                    Objects.equals(next, node.next) &&
+                    Objects.equals(random, node.random);
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(val, next, random);
         }
     }
 
